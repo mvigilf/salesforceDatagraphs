@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Unified Individual Data">
+        <template if:true={loading}>
+            <lightning-spinner size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-text-color_error">{error}</div>
+        </template>
+
+        <template if:true={graphData}>
+            <pre>{graphData}</pre>
+        </template>
+    </lightning-card>
+</template>
